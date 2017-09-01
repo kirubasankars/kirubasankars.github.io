@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>{{ block "title" . }}{{ end }}</title>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+<section class="section">
+<div class="container">
+{{ partial "header" . }}	
+{{ block "main" . }}{{ end }}
+</div>
+</section>
+{{ partial "footer" . }}	
+</body>
+</html>

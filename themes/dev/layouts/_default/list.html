@@ -1,0 +1,17 @@
+{{ define "main" }}
+      <h1>{{ humanize .Section }}</h1>
+	<div class="list">
+	{{ range sort .Paginator.Pages }}
+      <article>
+         <div class="title"><span class="date">{{ .Date.Format "Jan 2, 2006" }}</span><a href="{{ .Permalink }}">{{ .Title }}</a>	{{ if .Draft }} ::draft{{ end }}</div>
+         <div class="content">
+            {{ .Description }}
+         </div>
+				 {{ if .Params.tags }}
+         {{ partial "tags" .Params.tags }}
+         {{ end }}
+      </article>
+   {{ end }}
+	 {{ partial "pager" . }}
+	</div>
+{{ end }}

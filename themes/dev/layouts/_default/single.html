@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article class="page">
+  <h1 class="title">{{ .Title }}</h1>
+  <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
+  {{ if .Params.tags }}
+  {{ partial "tags" .Params.tags }}
+  {{ end }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+  </article>
+{{ end }}
+

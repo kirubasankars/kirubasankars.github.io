@@ -1,0 +1,30 @@
+<nav class="pager">
+  <div class="left">
+    <div class="level-item">
+      {{ if .Paginator.HasPrev }}
+      <a class="button" href="{{ .Paginator.Prev.URL }}">
+        &lt newer
+      </a>
+      {{ else }}
+      <a class="button is-disabled">
+        &lt newer
+      </a>
+      {{ end }}
+    </div>
+  </div>
+	<span class="spacer">|</span>
+  <div class="right is-marginless">
+    <div class="level-item">
+      {{ if .Paginator.HasNext }}
+      <a class="button" href="{{ .Paginator.Next.URL }}">
+        older &gt
+      </a>
+      {{ else }}
+      <a class="button is-disabled">
+        older &gt
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</nav>
+

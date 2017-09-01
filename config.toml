@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "KIRUBA SANKAR SWAMINATHAN"
+theme = "dev"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
