@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kiruba Sankar Swaminathan</title>
-    <link>https://kirubasankars.github.io/</link>
-    <description>Recent content on Kiruba Sankar Swaminathan</description>
+    <title>Browser on Kiruba Sankar Swaminathan</title>
+    <link>https://kirubasankars.github.io/tags/browser/</link>
+    <description>Recent content in Browser on Kiruba Sankar Swaminathan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Sep 2017 21:59:29 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2013 17:51:28 -0400</lastBuildDate>
     
-	<atom:link href="https://kirubasankars.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kirubasankars.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Vmware Horizon Client on Ubuntu 16.04 LTS.</title>
-      <link>https://kirubasankars.github.io/post/vmware-horizon-client-on-ubuntu-16.04-lts/</link>
-      <pubDate>Tue, 05 Sep 2017 21:59:29 -0400</pubDate>
-      
-      <guid>https://kirubasankars.github.io/post/vmware-horizon-client-on-ubuntu-16.04-lts/</guid>
-      <description>How to install VMware Horizon Client on Ubuntu 16.04. LTS I had a issue installing VMware Horizon Client. Resolved it with some common tools in Linux. Thought a blog post probably make sense, could save someone&amp;rsquo;s time. Also this knowledge could help to debug any general shared libraries related issues.
-following command help you to download bundle file from vmware and assign executable permission to it.
-$ wget https://download3.vmware.com/software/view/viewclients/CART17Q2/VMware-Horizon-Client-4.5.0-5650368.x64.bundle -o ~/Downloads/VMware-Horizon-Client-4.</description>
-    </item>
     
     <item>
       <title>Introduction to Custom Protocol Handler</title>

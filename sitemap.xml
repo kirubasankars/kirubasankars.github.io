@@ -3,8 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kirubasankars.github.io/post/getting-started/</loc>
-    <lastmod>2017-08-30T17:51:28-04:00</lastmod>
+    <loc>https://kirubasankars.github.io/post/vmware-horizon-client-on-ubuntu-16.04-lts/</loc>
+    <lastmod>2017-09-05T21:59:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kirubasankars.github.io/post/open-ie-from-chrome/</loc>
+    <lastmod>2013-08-21T17:51:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kirubasankars.github.io/post/javascript-disabled-browsers/</loc>
+    <lastmod>2013-08-21T17:51:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kirubasankars.github.io/tags/browser/</loc>
+    <lastmod>2013-08-21T17:51:28-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -13,32 +29,50 @@
   </url>
   
   <url>
-    <loc>https://kirubasankars.github.io/tags/elasticsearch/</loc>
-    <lastmod>2017-08-30T17:51:28-04:00</lastmod>
+    <loc>https://kirubasankars.github.io/tags/javascript/</loc>
+    <lastmod>2013-08-21T17:51:28-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kirubasankars.github.io/</loc>
-    <lastmod>2017-08-30T17:51:28-04:00</lastmod>
+    <lastmod>2017-09-05T21:59:29-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kirubasankars.github.io/tags/performace/</loc>
-    <lastmod>2017-08-30T17:51:28-04:00</lastmod>
+    <loc>https://kirubasankars.github.io/tags/linux/</loc>
+    <lastmod>2017-09-05T21:59:29-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kirubasankars.github.io/post/</loc>
-    <lastmod>2017-08-30T17:51:28-04:00</lastmod>
+    <lastmod>2017-09-05T21:59:29-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kirubasankars.github.io/tags/shell/</loc>
+    <lastmod>2017-09-05T21:59:29-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kirubasankars.github.io/tags/</loc>
-    <lastmod>2017-08-30T17:51:28-04:00</lastmod>
+    <lastmod>2013-08-21T17:51:28-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kirubasankars.github.io/tags/vmware/</loc>
+    <lastmod>2017-09-05T21:59:29-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kirubasankars.github.io/tags/website/</loc>
+    <lastmod>2013-08-21T17:51:28-04:00</lastmod>
     <priority>0</priority>
   </url>
   
