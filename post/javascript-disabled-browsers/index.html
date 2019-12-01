@@ -18,6 +18,17 @@
   <article class="page">
   <h1 class="title">[Solved] Optimized way to check/detect JavaScript disabled in the browser</h1>
   <div class="date">August 21, 2013</div>
+  <div class="content">
+    <p>For security concern, user may like to disable JavaScript in their web browser. If it is, raise a big problem in many website which depends on JavaScript to function well.</p>
+<p>The problem is, there is no http request header from browser to identify is javascript enabled/disabled to process subsequent http request process for nojavascript browsers. You can use following methods to do so.</p>
+<p>You can do get request to notify server to say JavaScript is disabled only when it is disabled. Is it sounds good? Using img tag.
+Example below.</p>
+<p>This get request will only triggered when no JavaScript is enabled. You can use some unique id to identify users has javascript disabled.</p>
+<pre><code>&lt;noscript&gt;
+  &lt;img src=”nojavascript.[asp/aspx/php/jsp]?userid=[userid]” /&gt;
+&lt;/noscript&gt;
+</code></pre>
+  </div>
   
   <div class="tags">
     
@@ -30,22 +41,6 @@
 </div>
 
   
-  <div class="content">
-    <p>For security concern, user may like to disable JavaScript in their web browser. If it is, raise a big problem in many website which depends on JavaScript to function well.</p>
-
-<p>The problem is, there is no http request header from browser to identify is javascript enabled/disabled to process subsequent http request process for nojavascript browsers. You can use following methods to do so.</p>
-
-<p>You can do get request to notify server to say JavaScript is disabled only when it is disabled. Is it sounds good? Using img tag.
-Example below.</p>
-
-<p>This get request will only triggered when no JavaScript is enabled. You can use some unique id to identify users has javascript disabled.</p>
-
-<pre><code>&lt;noscript&gt;
-  &lt;img src=”nojavascript.[asp/aspx/php/jsp]?userid=[userid]” /&gt;
-&lt;/noscript&gt;
-</code></pre>
-
-  </div>
   </article>
 
 </div>

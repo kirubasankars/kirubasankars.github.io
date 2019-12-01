@@ -25,7 +25,6 @@ html, body {
 
 .list article {
 	padding:10px;
-  border-top: 1px solid rgba(191, 185, 185, 0.28)
 }
 
 .list article .content {
@@ -37,11 +36,16 @@ html, body {
 }
 
 .list article .title a {
-	color: #2b8cbe;
+  color: #000000;
+  text-decoration: none;
+}
+
+.list article .title a:hover {
+  text-decoration: underline;
 }
 
 .list article .title a:visited {
-	color: #0e4765;
+	color: #000000;
 }
 
 
@@ -49,7 +53,7 @@ html, body {
 	padding-right:10px;
 }
 
-.list article .title .date{
+.list article .title .date {
 	padding-right:5px;
   font-size: 0.9em;
 }
@@ -93,7 +97,6 @@ nav .right {
   border-radius: 5px;
   font-size: 13px;
 }
-
 
 .page {
 	clear:both;

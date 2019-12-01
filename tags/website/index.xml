@@ -1,24 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Website on Kiruba Sankar Swaminathan</title>
+    <title>website on Kiruba Sankar Swaminathan</title>
     <link>https://kirubasankars.github.io/tags/website/</link>
-    <description>Recent content in Website on Kiruba Sankar Swaminathan</description>
+    <description>Recent content in website on Kiruba Sankar Swaminathan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Aug 2013 17:51:28 -0400</lastBuildDate>
     
 	<atom:link href="https://kirubasankars.github.io/tags/website/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Introduction to Custom Protocol Handler</title>
-      <link>https://kirubasankars.github.io/post/open-ie-from-chrome/</link>
-      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
-      
-      <guid>https://kirubasankars.github.io/post/open-ie-from-chrome/</guid>
-      <description>http://kirubasankars.blogspot.com/2014/10/open-ie-from-chrome-chrome-to-ie.html</description>
-    </item>
     
     <item>
       <title>[Solved] Optimized way to check/detect JavaScript disabled in the browser</title>
@@ -29,6 +20,15 @@
       <description>For security concern, user may like to disable JavaScript in their web browser. If it is, raise a big problem in many website which depends on JavaScript to function well.
 The problem is, there is no http request header from browser to identify is javascript enabled/disabled to process subsequent http request process for nojavascript browsers. You can use following methods to do so.
 You can do get request to notify server to say JavaScript is disabled only when it is disabled.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Custom Protocol Handler</title>
+      <link>https://kirubasankars.github.io/post/open-ie-from-chrome/</link>
+      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
+      
+      <guid>https://kirubasankars.github.io/post/open-ie-from-chrome/</guid>
+      <description>http://kirubasankars.blogspot.com/2014/10/open-ie-from-chrome-chrome-to-ie.html</description>
     </item>
     
   </channel>

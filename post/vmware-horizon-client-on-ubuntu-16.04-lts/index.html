@@ -18,6 +18,47 @@
   <article class="page">
   <h1 class="title">Vmware Horizon Client on Ubuntu 16.04 LTS.</h1>
   <div class="date">September 5, 2017</div>
+  <div class="content">
+    <h2 id="how-to-install-vmware-horizon-client-on-ubuntu-1604-lts">How to install VMware Horizon Client on Ubuntu 16.04. LTS</h2>
+<p>I had a issue installing VMware Horizon Client. Resolved it with some common tools in Linux. Thought a blog post probably make sense, could save someone's time. Also this knowledge could help to debug any general shared libraries related issues.</p>
+<p>following command help you to download bundle file from vmware and assign executable permission to it.</p>
+<p><code>$ wget https://download3.vmware.com/software/view/viewclients/CART17Q2/VMware-Horizon-Client-4.5.0-5650368.x64.bundle -o ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle &amp; chmod +x ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle</code></p>
+<p>Note: Please don't copy &amp; paste it and go to vmware website and get a latest or particular version you wanted to install.</p>
+<p>To install, run the following command.</p>
+<p><code>$ sudo ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle</code></p>
+<p>Go through setup wizard and complete the installation. Good Luck for you. my Horizon client failed on start up.</p>
+<p>VMware Horizon Client was missing some shared library on my machine. How do I know what's missing? i did ran following command</p>
+<pre><code class="language-$" data-lang="$">		 libudev.so.0 =&gt; not found
+		 libssl.so.1.0.2 =&gt; not found
+		 libcrypto.so.1.0.2 =&gt; not found```
+
+Unlike other operating systems, Linux uses shared libraries a lot. There are good and bad thing about it. read about it. &quot;**ldd**&quot; command on any executable gives you list of all shared libraries used and weather a shared library exists on your machine. I needed those libs to start my horizon client. 
+
+After spent a hour in google, found a **libglibmm** package has those libraries. 
+
+#### Installing libglibmm
+
+First find a right version to install it with following command.
+
+```$ apt search libglibmm```
+
+</code></pre><p>libglibmm-2.4-1v5/xenial,now 2.46.3-1 amd64 [installed]
+C++ wrapper for the GLib toolkit (shared libraries)</p>
+<p>libglibmm-2.4-dbg/xenial 2.46.3-1 amd64
+C++ wrapper for the GLib toolkit (debug symbols)</p>
+<p>libglibmm-2.4-dev/xenial,now 2.46.3-1 amd64 [installed]
+C++ wrapper for the GLib toolkit (development files)</p>
+<p>libglibmm-2.4-doc/xenial,xenial 2.46.3-1 all
+C++ wrapper for the GLib toolkit (documentation)</p>
+<pre><code>
+Install the one tagged with **(shared libraries)**. in my case, the first one.
+
+```$ sudo apt install libglibmm-2.4-1v5```
+
+Now You can make sure with **ldd**, is all libraries are exits. Good Luck.
+
+</code></pre>
+  </div>
   
   <div class="tags">
     
@@ -30,62 +71,6 @@
 </div>
 
   
-  <div class="content">
-    
-
-<h2 id="how-to-install-vmware-horizon-client-on-ubuntu-16-04-lts">How to install VMware Horizon Client on Ubuntu 16.04. LTS</h2>
-
-<p>I had a issue installing VMware Horizon Client. Resolved it with some common tools in Linux. Thought a blog post probably make sense, could save someone&rsquo;s time. Also this knowledge could help to debug any general shared libraries related issues.</p>
-
-<p>following command help you to download bundle file from vmware and assign executable permission to it.</p>
-
-<p><code>$ wget https://download3.vmware.com/software/view/viewclients/CART17Q2/VMware-Horizon-Client-4.5.0-5650368.x64.bundle -o ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle &amp; chmod +x ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle</code></p>
-
-<p>Note: Please don&rsquo;t copy &amp; paste it and go to vmware website and get a latest or particular version you wanted to install.</p>
-
-<p>To install, run the following command.</p>
-
-<p><code>$ sudo ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle</code></p>
-
-<p>Go through setup wizard and complete the installation. Good Luck for you. my Horizon client failed on start up.</p>
-
-<p>VMware Horizon Client was missing some shared library on my machine. How do I know what&rsquo;s missing? i did ran following command</p>
-
-<p><code>$ ldd /usr/lib/vmware/view/bin/vmware-view | grep 'not found'
-         libudev.so.0 =&gt; not found
-         libssl.so.1.0.2 =&gt; not found
-         libcrypto.so.1.0.2 =&gt; not found</code></p>
-
-<p>Unlike other operating systems, Linux uses shared libraries a lot. There are good and bad thing about it. read about it. &ldquo;<strong>ldd</strong>&rdquo; command on any executable gives you list of all shared libraries used and weather a shared library exists on your machine. I needed those libs to start my horizon client.</p>
-
-<p>After spent a hour in google, found a <strong>libglibmm</strong> package has those libraries.</p>
-
-<h4 id="installing-libglibmm">Installing libglibmm</h4>
-
-<p>First find a right version to install it with following command.</p>
-
-<p><code>$ apt search libglibmm</code></p>
-
-<pre><code>libglibmm-2.4-1v5/xenial,now 2.46.3-1 amd64 [installed]
-  C++ wrapper for the GLib toolkit (shared libraries)
-
-libglibmm-2.4-dbg/xenial 2.46.3-1 amd64
-  C++ wrapper for the GLib toolkit (debug symbols)
-
-libglibmm-2.4-dev/xenial,now 2.46.3-1 amd64 [installed]
-  C++ wrapper for the GLib toolkit (development files)
-
-libglibmm-2.4-doc/xenial,xenial 2.46.3-1 all
-  C++ wrapper for the GLib toolkit (documentation)
-</code></pre>
-
-<p>Install the one tagged with <strong>(shared libraries)</strong>. in my case, the first one.</p>
-
-<p><code>$ sudo apt install libglibmm-2.4-1v5</code></p>
-
-<p>Now You can make sure with <strong>ldd</strong>, is all libraries are exits. Good Luck.</p>
-
-  </div>
   </article>
 
 </div>

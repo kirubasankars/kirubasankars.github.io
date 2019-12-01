@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kiruba Sankar Swaminathan</title>
@@ -6,28 +6,10 @@
     <description>Recent content in Tags on Kiruba Sankar Swaminathan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Aug 2013 17:51:28 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 05 Sep 2017 21:59:29 -0400</lastBuildDate>
     
 	<atom:link href="https://kirubasankars.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Browser</title>
-      <link>https://kirubasankars.github.io/tags/browser/</link>
-      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
-      
-      <guid>https://kirubasankars.github.io/tags/browser/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://kirubasankars.github.io/tags/javascript/</link>
-      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
-      
-      <guid>https://kirubasankars.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Linux</title>
@@ -48,7 +30,7 @@
     </item>
     
     <item>
-      <title>Vmware</title>
+      <title>VMware</title>
       <link>https://kirubasankars.github.io/tags/vmware/</link>
       <pubDate>Tue, 05 Sep 2017 21:59:29 -0400</pubDate>
       
@@ -57,7 +39,25 @@
     </item>
     
     <item>
-      <title>Website</title>
+      <title>browser</title>
+      <link>https://kirubasankars.github.io/tags/browser/</link>
+      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
+      
+      <guid>https://kirubasankars.github.io/tags/browser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://kirubasankars.github.io/tags/javascript/</link>
+      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
+      
+      <guid>https://kirubasankars.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
       <link>https://kirubasankars.github.io/tags/website/</link>
       <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
       

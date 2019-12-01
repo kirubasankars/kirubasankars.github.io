@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kiruba Sankar Swaminathan</title>
@@ -17,18 +17,9 @@
       <pubDate>Tue, 05 Sep 2017 21:59:29 -0400</pubDate>
       
       <guid>https://kirubasankars.github.io/post/vmware-horizon-client-on-ubuntu-16.04-lts/</guid>
-      <description>How to install VMware Horizon Client on Ubuntu 16.04. LTS I had a issue installing VMware Horizon Client. Resolved it with some common tools in Linux. Thought a blog post probably make sense, could save someone&amp;rsquo;s time. Also this knowledge could help to debug any general shared libraries related issues.
+      <description>How to install VMware Horizon Client on Ubuntu 16.04. LTS I had a issue installing VMware Horizon Client. Resolved it with some common tools in Linux. Thought a blog post probably make sense, could save someone&#39;s time. Also this knowledge could help to debug any general shared libraries related issues.
 following command help you to download bundle file from vmware and assign executable permission to it.
 $ wget https://download3.vmware.com/software/view/viewclients/CART17Q2/VMware-Horizon-Client-4.5.0-5650368.x64.bundle -o ~/Downloads/VMware-Horizon-Client-4.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Custom Protocol Handler</title>
-      <link>https://kirubasankars.github.io/post/open-ie-from-chrome/</link>
-      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
-      
-      <guid>https://kirubasankars.github.io/post/open-ie-from-chrome/</guid>
-      <description>http://kirubasankars.blogspot.com/2014/10/open-ie-from-chrome-chrome-to-ie.html</description>
     </item>
     
     <item>
@@ -40,6 +31,15 @@ $ wget https://download3.vmware.com/software/view/viewclients/CART17Q2/VMware-Ho
       <description>For security concern, user may like to disable JavaScript in their web browser. If it is, raise a big problem in many website which depends on JavaScript to function well.
 The problem is, there is no http request header from browser to identify is javascript enabled/disabled to process subsequent http request process for nojavascript browsers. You can use following methods to do so.
 You can do get request to notify server to say JavaScript is disabled only when it is disabled.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Custom Protocol Handler</title>
+      <link>https://kirubasankars.github.io/post/open-ie-from-chrome/</link>
+      <pubDate>Wed, 21 Aug 2013 17:51:28 -0400</pubDate>
+      
+      <guid>https://kirubasankars.github.io/post/open-ie-from-chrome/</guid>
+      <description>http://kirubasankars.blogspot.com/2014/10/open-ie-from-chrome-chrome-to-ie.html</description>
     </item>
     
   </channel>
