@@ -1,23 +1,43 @@
 <html>
-<head>
-<title></title>
-<link rel="stylesheet" href="/css/site.css" />
-</head>
-<body>
-<section class="section">
-<div class="container">
-<nav>
-	<div class="left brand">
-		<h1><a class="nav-item" href="https://kirubasankars.github.io/">Kiruba Sankar Swaminathan</a></h1>
-	</div>
-	<div class="right">
-	</div>
-</nav>
-	
 
-  <article class="page">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+
+<body>
+    <div class="container">
+        <ul class="navbar">
+	<li class="brand">
+		<a href="https://kirubasankars.github.io/">
+			Kiruba Sankar Swaminathan
+		</a>
+	</li>
+	<li class="links">
+		<a href="http://github.com/kirubasankars"><svg width="32" height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+	</li>
+	<li class="links">
+		<a href="https://linkedin.com/in/kirubasankars"><svg width="32" height="32" class="octicon octicon-person" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M12 14.002a.998.998 0 01-.998.998H1.001A1 1 0 010 13.999V13c0-2.633 4-4 4-4s.229-.409 0-1c-.841-.62-.944-1.59-1-4 .173-2.413 1.867-3 3-3s2.827.586 3 3c-.056 2.41-.159 3.38-1 4-.229.59 0 1 0 1s4 1.367 4 4v1.002z"></path></svg></a>
+	</li>
+</ul>
+        
+<article class="page">
   <h1 class="title">Vmware Horizon Client on Ubuntu 16.04 LTS.</h1>
   <div class="date">September 5, 2017</div>
+  
+  <div class="tags">
+    
+        <a class="button is-link" href="/tags/linux">linux</a>
+    
+        <a class="button is-link" href="/tags/shell">shell</a>
+    
+        <a class="button is-link" href="/tags/vmware">vmware</a>
+    
+</div>
+
+  
   <div class="content">
     <h2 id="how-to-install-vmware-horizon-client-on-ubuntu-1604-lts">How to install VMware Horizon Client on Ubuntu 16.04. LTS</h2>
 <p>I had a issue installing VMware Horizon Client. Resolved it with some common tools in Linux. Thought a blog post probably make sense, could save someone's time. Also this knowledge could help to debug any general shared libraries related issues.</p>
@@ -28,55 +48,37 @@
 <p><code>$ sudo ~/Downloads/VMware-Horizon-Client-4.5.0.x64.bundle</code></p>
 <p>Go through setup wizard and complete the installation. Good Luck for you. my Horizon client failed on start up.</p>
 <p>VMware Horizon Client was missing some shared library on my machine. How do I know what's missing? i did ran following command</p>
-<pre><code class="language-$" data-lang="$">		 libudev.so.0 =&gt; not found
+<pre><code>    $ ldd /usr/lib/vmware/view/bin/vmware-view | grep 'not found'
+		 libudev.so.0 =&gt; not found
 		 libssl.so.1.0.2 =&gt; not found
-		 libcrypto.so.1.0.2 =&gt; not found```
+		 libcrypto.so.1.0.2 =&gt; not found
+</code></pre><p>Unlike other operating systems, Linux uses shared libraries a lot. There are good and bad thing about it. read about it. &ldquo;<strong>ldd</strong>&rdquo; command on any executable gives you list of all shared libraries used and weather a shared library exists on your machine. I needed those libs to start my horizon client.</p>
+<p>After spent a hour in google, found a <strong>libglibmm</strong> package has those libraries.</p>
+<h4 id="installing-libglibmm">Installing libglibmm</h4>
+<p>First find a right version to install it with following command.</p>
+<p><code>$ apt search libglibmm</code></p>
+<pre><code>libglibmm-2.4-1v5/xenial,now 2.46.3-1 amd64 [installed]
+  C++ wrapper for the GLib toolkit (shared libraries)
 
-Unlike other operating systems, Linux uses shared libraries a lot. There are good and bad thing about it. read about it. &quot;**ldd**&quot; command on any executable gives you list of all shared libraries used and weather a shared library exists on your machine. I needed those libs to start my horizon client. 
+libglibmm-2.4-dbg/xenial 2.46.3-1 amd64
+  C++ wrapper for the GLib toolkit (debug symbols)
 
-After spent a hour in google, found a **libglibmm** package has those libraries. 
+libglibmm-2.4-dev/xenial,now 2.46.3-1 amd64 [installed]
+  C++ wrapper for the GLib toolkit (development files)
 
-#### Installing libglibmm
+libglibmm-2.4-doc/xenial,xenial 2.46.3-1 all
+  C++ wrapper for the GLib toolkit (documentation)
+</code></pre><p>Install the one tagged with <strong>(shared libraries)</strong>. in my case, the first one.</p>
+<p><code>$ sudo apt install libglibmm-2.4-1v5</code></p>
+<p>Now You can make sure with <strong>ldd</strong>, is all libraries are exits. Good Luck.</p>
 
-First find a right version to install it with following command.
-
-```$ apt search libglibmm```
-
-</code></pre><p>libglibmm-2.4-1v5/xenial,now 2.46.3-1 amd64 [installed]
-C++ wrapper for the GLib toolkit (shared libraries)</p>
-<p>libglibmm-2.4-dbg/xenial 2.46.3-1 amd64
-C++ wrapper for the GLib toolkit (debug symbols)</p>
-<p>libglibmm-2.4-dev/xenial,now 2.46.3-1 amd64 [installed]
-C++ wrapper for the GLib toolkit (development files)</p>
-<p>libglibmm-2.4-doc/xenial,xenial 2.46.3-1 all
-C++ wrapper for the GLib toolkit (documentation)</p>
-<pre><code>
-Install the one tagged with **(shared libraries)**. in my case, the first one.
-
-```$ sudo apt install libglibmm-2.4-1v5```
-
-Now You can make sure with **ldd**, is all libraries are exits. Good Luck.
-
-</code></pre>
   </div>
-  
-  <div class="tags">
-    
-        <a class="button is-link" href="/tags/linux">Linux</a>
-    
-        <a class="button is-link" href="/tags/shell">Shell</a>
-    
-        <a class="button is-link" href="/tags/vmware">VMware</a>
-    
-</div>
+</article>
 
-  
-  </article>
-
-</div>
-</section>
+        
 
 
-	
+    </div>
 </body>
+
 </html>
