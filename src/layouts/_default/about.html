@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ partial "header.html" . }}
+
+<div class="title">
+    {{ .Title }}
+</div>
+<div class="content">
+    <div class="markdown-body">
+        {{ .Content }}
+    </div>
+</div>
+
+<div class="line"></div>
+
+{{ end }}
