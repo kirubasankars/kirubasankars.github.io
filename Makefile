@@ -1,2 +1,4 @@
 build:
-	cd ./src && hugo && cd .. && mv ./src/public/** ./docs/
+	rm -rf ./docs
+	cd ./src && hugo && cd ..
+	mv ./src/public ./docs
