@@ -1,8 +1,7 @@
 ---
+title: "Hey, I'm Kiruba"
 layout: about
 ---
-
-# Hey, I'm Kiruba.
 
 I’m a developer. 
 
