@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 
-  <title>Understanding ActiveRecord Dependent Options</title>  
+  <title>Hello, World</title>  
 
   <style>
     :root {
@@ -172,24 +172,13 @@
 
 <div class="date">July 17, 2023</div>
 <div class="title">
-    <h1>Understanding ActiveRecord Dependent Options</h1>
+    <h1>Hello, World</h1>
 </div>
 <div class="content">
     <div class="markdown-body">
         <p>I like computer and music. I like food.</p>
 <p>I love my kids.</p>
 <p>And I like to play Call of Duty.</p>
-<p><kbd class="markdown-kbd">Space</kbd> And I like to play Call of Duty.</p>
-<p><kbd class="markdown-kbd">Space</kbd> And I like to play Call of Duty.</p>
-<p>A screencast is a digital video recording of a computer screen while someone is using it, and usually includes audio narration. A course based on screencasts will have the instructor recording their screen while they run through presentation slides, terminal commands, setting up a development environment, writing code in an editor, running code, etc.</p>
-<p>Typically these will be broken down into smaller sections rather than one massive recording. When taking the course, you can select which video to watch, then use the video player controls to pause, go forward, go back, speed up and so on. There is no time limit to complete the course, and no one is taking attendance.</p>
-<h1 id="delete-destroy">Delete Destroy</h1>
-<p>I wanted to understand what would happen when attempting to remove various Author or Book records from the database with respect to their associations. However, there&rsquo;s an additional complexity in that there&rsquo;s two different methods to remove a record, which sound similar, but do slightly different things. From the Rails API Documentation:</p>
-<ul>
-<li>delete: Deletes the record in the database and freezes this instance to reflect that no changes should be made (since they can&rsquo;t be persisted). Returns the frozen instance. The row is simply removed with an SQL DELETE statement on the record&rsquo;s primary key, and no callbacks are executed.</li>
-<li>destroy: Deletes the record in the database and freezes this instance to reflect that no changes should be made (since they can&rsquo;t be persisted). There&rsquo;s a series of callbacks associated with destroy. If the before_destroy callback throws :abort the action is cancelled and destroy returns false.
-destroy!: Similar to destroy, except raises ActiveRecord::RecordNotDestroyed rather than returning false if the record is not destroyed.</li>
-</ul>
 
     </div>
 </div>
